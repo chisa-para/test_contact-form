@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/',[ContactController::class, 'index']);
+
+Route::post('/confirm',[ContactController::class, 'confirm']);
+
+Route::get('/thanks',[ContactController::class, 'thanks']);
+
+Route::get('/register',[AdminController::class, 'register']);
+
+Route::get('/login',[AdminController::class, 'login']);
