@@ -15,9 +15,9 @@
     margin: 10px auto;
 }
 
-.form {
+.form__content {
     margin: 0 auto;
-    width: 70%;
+    width: 60%;
 }
 
 .confirm-table {
@@ -30,7 +30,7 @@
 
 .confirm-table__header {
     padding: 15px;
-    width: 20%;
+    width: 30%;
     border-bottom: 1px solid #ddd;
     background-color: #eee;
     font-weight: bold;

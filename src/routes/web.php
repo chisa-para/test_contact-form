@@ -23,8 +23,10 @@ Route::get('/',[ContactController::class, 'index']);
 
 Route::post('/confirm',[ContactController::class, 'confirm']);
 
-Route::get('/thanks',[ContactController::class, 'thanks']);
+Route::get('/thanks',[ContactController::class, 'store']);
 
 Route::get('/register',[AdminController::class, 'register']);
 
 Route::get('/login',[AdminController::class, 'login']);
+
+Route::get('/admin',[AdminController::class, 'admin']);

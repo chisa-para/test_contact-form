@@ -27,7 +27,7 @@
 
 .form__group{
     display: flex;
-    margin: 8px auto;
+    margin: 8px auto 20px auto;
     width: 100%;
 }
 
@@ -45,6 +45,12 @@
 .form__label--required{
     color: red;
 }
+
+.form__error {
+    color: red;
+    font-size: 13px;
+}
+
 
 .form__input--name{
     width: 50%;

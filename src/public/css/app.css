@@ -31,8 +31,8 @@
     text-decoration: none;
     margin-right: 30px;
     padding: 5px 10px;
-    border: solid 1px black;
+    border: solid 1px rgb(45, 45, 45);
     border-radius: 2px;
-    color: rgb(82, 82, 82);
+    color: rgb(45, 45, 45);
     font-family: Sylfaen;
 }

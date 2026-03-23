@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AdminRequest;
+use App\Models\Contact;
 
 class AdminController extends Controller
 {
@@ -15,5 +16,10 @@ class AdminController extends Controller
     public function login(Request $request)
     {
         return view('login');
+    }
+
+    public function admin(Request $request)
+    {
+        return view('admin');
     }
 }
