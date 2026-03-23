@@ -19,13 +19,23 @@ class ContactController extends Controller
     public function confirm(ContactRequest $request)
     {
         $contacts = $request->all();
+        $categories = Category::find($request->category_id);
 
-        return view('confirm',compact('contacts'));
+        return view('confirm',compact('contacts','categories'));
     }
 
     public function store(Request $request)
     {
-        $contact = $request->all();
+        $contact = $request->only([
+            'last_name',
+            'first_name',
+            'gender',
+            'email',
+            'tel',
+            'address',
+            'building',
+            'category_id',
+            'detail']);
         Contact::create($contact);
 
         return view('thanks');

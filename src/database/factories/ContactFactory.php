@@ -25,11 +25,11 @@ class ContactFactory extends Factory
             'first_name' => $this->faker->firstName,
             'gender'     => $this->faker->randomElement([1, 2, 3]),
             'email'      => $this->faker->unique()->safeEmail, 
-            'tel'        => $this->faker->phoneNumber,
+            'tel'        => $this->faker->numerify('###########'),
             'address'    => $this->faker->address,
             'building'   => $this->faker->secondaryAddress, 
             'category_id' => $this->faker->randomElement($categoryIds),
-            'detail'     => $this->faker->realText(60),
+            'detail'     => $this->faker->realText(30),
         ];
     }
 }

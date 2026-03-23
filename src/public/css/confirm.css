@@ -41,10 +41,24 @@
     border-bottom: 1px solid #ddd;
 }
 
+.confirm-table__name {
+    display: flex;
+    width: 30%;
+}
+
+.confirm-table__name input {
+    width: 10%;
+}
+
 .confirm-table__text input {
     width: 100%;
     outline: none;
     border: none;
+}
+
+.confirm-table__text p {
+    font-size: 13px;
+    margin-left: 2px;
 }
 
 .confirm-table__row:last-child .confirm-table__header,

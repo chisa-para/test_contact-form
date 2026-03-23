@@ -15,13 +15,16 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お名前</th>
           <td class="confirm-table__text">
-            <input type="text" name="name" value="{{ $contacts["last_name"] }}&emsp;{{ $contacts["first_name"] }}" readonly/>
+            <div class="confirm-table__name">
+              <input type="text" name="last_name" value="{{ $contacts["last_name"] }}" readonly/>
+              <input type="text" name="first_name" value="{{ $contacts["first_name"] }}" readonly/>
+            </div>
           </td>
         </tr>
         <tr class="confirm-table__row">
           <th class="confirm-table__header">性別</th>
           <td class="confirm-table__text">
-            <input class="input-gender" type="text" name="gender" value="@if( $contacts["gender"] == 1 )男性@elseif( $contacts["gender"] == 2 )女性@elseその他@endif" readonly />
+            <input class="input-gender" type="text" name="gender_text" value="@if( $contacts["gender"] == 1 )男性@elseif( $contacts["gender"] == 2 )女性@elseその他@endif" readonly />
             <input type="hidden" name="gender" value="{{ $contacts["gender"] }}" />
           </td>
         </tr>
@@ -52,7 +55,8 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お問い合わせの種類</th>
           <td class="confirm-table__text">
-            <input type="text" name="category_id" value="{{ $contacts["category"] }}" readonly/>
+            <p>{{ $categories["content"] }}</p>
+            <input type="hidden" name="category_id" value="{{ $categories["id"] }}" readonly/>
           </td>
         </tr>
         <tr class="confirm-table__row">

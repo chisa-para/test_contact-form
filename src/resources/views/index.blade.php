@@ -130,10 +130,10 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <select name="category">
+                    <select name="category_id">
                         <option value="" selected>選択してください</option>
                         @foreach($categories as $category)
-                        <option  value="{{ $category->content }}" {{ old('category') == $category->content ? 'selected' : '' }}>{{ $category->content }}</option>
+                        <option  value="{{ $category->id }}">{{ $category->content }}</option>
                         @endforeach
                     </select>
                 </div>
