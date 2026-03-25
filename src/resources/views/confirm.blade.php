@@ -10,6 +10,9 @@
   </div>
   <form action="/thanks" class="form__content">
     @csrf
+    @foreach($contacts as $key => $value)
+    <input type="hidden" name="{{ $key }}" value="{{ $value }}">
+    @endforeach
     <div class="confirm-table">
       <table class="confirm-table__inner">
         <tr class="confirm-table__row">
@@ -69,7 +72,7 @@
     </div>
     <div class="form__button">
       <button class="form__button-submit" type="submit">送信</button>
-      <a href="" class="form__edit">修正</a>
+      <button name="back" class="button-edit" type="submit" onclick="history.back()">修正</button>
     </div>
   </form>
 </div>

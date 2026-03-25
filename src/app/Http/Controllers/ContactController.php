@@ -21,11 +21,18 @@ class ContactController extends Controller
         $contacts = $request->all();
         $categories = Category::find($request->category_id);
 
+        $request->flash();
+
         return view('confirm',compact('contacts','categories'));
     }
 
     public function store(Request $request)
     {
+        if ($request->has('back')) {
+            return redirect('/')->withInput();
+        }
+
+
         $contact = $request->only([
             'last_name',
             'first_name',

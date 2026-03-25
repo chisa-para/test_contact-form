@@ -96,10 +96,10 @@
     display: inline-block;
 }
 
-.contact-page{
+
+.pagination li {
     display: inline-block;
 }
-
 .table {
     width: 100%;
 }
@@ -108,6 +108,6 @@
     background-color: black;
 }
 
-.table th {
+.table__heading th {
     color: white;
 }

@@ -66,6 +66,11 @@ main {
     font-size: 16px;
 }
 
+.form__error {
+    color: red;
+    font-size: 13px;
+}
+
 .form__button {
     display: flex;
     justify-content: center;

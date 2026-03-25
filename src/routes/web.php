@@ -25,8 +25,12 @@ Route::post('/confirm',[ContactController::class, 'confirm']);
 
 Route::get('/thanks',[ContactController::class, 'store']);
 
-Route::get('/register',[AdminController::class, 'register']);
+Route::middleware('auth')->group(function (){
+    Route::get('/admin',[AdminController::class, 'index']);
+    });
 
-Route::get('/login',[AdminController::class, 'login']);
+Route::get('/search',[AdminController::class, 'search']);
 
-Route::get('/admin',[AdminController::class, 'admin']);
+Route::get('/admin/export',[AdminController::class, 'export']);
+
+Route::delete('/admin/delete/{id}',[AdminController::class, 'destroy']);
