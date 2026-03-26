@@ -14,13 +14,18 @@ Dockerビルド
 2. `docker-compose up -d --build`
 
 Laravel環境構築
-1. `docker-compsoe exec php bash`
-2. `composer install`
-3. `cp src/.env.example src/.env`
-環境変数を適宣変更
+1.`cp src/.env.example src/.env`
+　.env内の各項目の値を下記のように変更
+　・DB_HOST=mysql
+　・DB_DATABASE=laravel_db
+　・DB_USERNAME=laravel_user
+　・DB_PASSWORD=laravel_pass
+
+2. `docker-compose exec php bash`
+3. `composer install` 
 4. `php artisan key:generate`
 5. `php artisan migrate`
-6. `php artisan bd:seed`
+6. `php artisan db:seed`
 
 ## 3. 開発環境
 
