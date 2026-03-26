@@ -1,12 +1,10 @@
-@extends('layout.app-layout')
+@extends('layout.app')
 @section('css')
 <link rel="stylesheet" href="{{asset('css/register.css')}}">
 @endsection
 
 @section('button')
-<div class="header-button-group">
-    <a href="/register" class="header-button">Register</a>
-</div>
+<a href="/register" class="header-button">Register</a>
 @endsection
 
 @section('content')

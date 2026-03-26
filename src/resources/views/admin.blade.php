@@ -1,20 +1,25 @@
-@extends('layout.app-layout')
+@extends('layout.app')
 @section('css')
 <link rel="stylesheet" href="{{asset('css/admin.css')}}">
 @endsection
 
 @section('button')
 @if (Auth::check())
-<div class="header-button-group">
     <form action="/logout" class="header-button" method="post">
         @csrf
         <button>Logout</button>
     </form>
-</div>
 @endif
 @endsection
 
 @section('content')
+<div class="todo__alert">
+  @if(session('successMessage'))
+  <div class="todo__alert--success">
+    {{session('successMessage')}}
+  </div>
+  @endif
+</div>
 <div class="contact-table__content">
     <div class="contact-table__heading">
         <h2>Admin</h2>
@@ -95,43 +100,44 @@
     </div>
     <dialog id="detailModal" class="modal">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>お問い合わせ詳細</h2>
+            <div class="close-button-div">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+            </div>
             <table class="detail-table">
-                <tr>
+                <tr class="detail-table_row">
                     <th>お名前</th>
                     <td id="modal-name"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>性別</th>
                     <td id="modal-gender"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>メールアドレス</th>
                     <td id="modal-email"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>電話番号</th>
                     <td id="modal-tel"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>住所</th>
                     <td id="modal-address"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>建物名</th>
                     <td id="modal-building"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>お問い合わせの種類</th>
                     <td id="modal-category"></td>
                 </tr>
-                <tr>
+                <tr class="detail-table_row">
                     <th>お問い合わせ内容</th>
                     <td id="modal-detail" style="white-space: pre-wrap;"></td>
                 </tr>
             </table>
-            <form id="delete-form" action="/admin/delete/{id}" method="post" onsubmit="return confirm('本当に削除しますか？')">
+            <form id="delete-form" class="button-delete-form" action="/admin/delete/{id}" method="post" onsubmit="return confirm('本当に削除しますか？')">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="button-delete">削除</button>

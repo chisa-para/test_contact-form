@@ -14,7 +14,7 @@
             <a class="header-logo" href="/">FashionablyLate</a>
         </div>
         <div class="header-button-group">
-            <a href="" class="header-group"></a>
+            @yield('button')
         </div>
     </header>
     <main>

@@ -43,11 +43,6 @@
 
 .confirm-table__name {
     display: flex;
-    width: 30%;
-}
-
-.confirm-table__name input {
-    width: 10%;
 }
 
 .confirm-table__text input {

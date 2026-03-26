@@ -1,5 +1,19 @@
-.header-button-group {
-    display: inline-block;
+.todo__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.header-button-group button {
+    background-color: rgb(209, 209, 209);
+    border: 1px solid rgb(45, 45, 45);
+    padding: 5px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: Sylfaen;
 }
 
 .contact-table__content {
@@ -68,6 +82,9 @@
 }
 
 .search-button__reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10%;
     height: 30px;
     color: inherit;
@@ -76,32 +93,38 @@
 .reset-button {
     background-color: rgb(121, 121, 121);
     text-decoration: none;
+    text-align: center;
     width: 100%;
-    height: 50px;
+    height: 100%;
+    padding-top: 3px;
     color: white;
     border: none;
 
 }
 
-.search-button__reset:hover {
+.reset-button:hover {
     background-color: rgb(184, 184, 184);
 }
 
 .contact-export {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 60px;
 }
 
 .form-export {
     display: inline-block;
 }
 
-
 .pagination li {
     display: inline-block;
 }
+
 .table {
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 ;
 }
 
 .table__heading {
@@ -110,4 +133,77 @@
 
 .table__heading th {
     color: white;
+}
+
+.table-item td {
+    text-align: center;
+    
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+}
+
+.table-item:hover {
+    background-color: #ddd;
+}
+
+.table-item td:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.table-item td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.modal {
+    width: 50%;
+    height: 500px;
+    padding: 20px 20px;
+}
+
+.modal-content {
+    justify-content: left;
+}
+
+.close-button-div {
+    text-align: right;
+}
+
+.close-button {
+    color: #858585;
+    padding: 2px 5px;
+    border: solid 1px #858585;
+    border-radius: 50% 50% 50% 50%;
+}
+
+.detail-table {
+    margin-bottom: 40px;
+}
+
+.detail-table_row {
+    text-align: left;
+    height: 40px;
+}
+
+.detail-table_row th {
+    white-space: nowrap;
+    padding-right: 50px;
+}
+
+.button-delete-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-delete {
+    background-color: rgb(255, 0, 0);
+    width: 90px;
+    padding: 5px;
+    color: white;
+    font-size: 1.0rem;
+    border: none;
+}
+
+.button-delete:hover {
+    background-color: rgb(87, 87, 87);
 }

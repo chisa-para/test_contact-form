@@ -75,6 +75,6 @@ class AdminController extends Controller
     {
         Contact::find($id)->delete();
 
-        return redirect('/admin');// ->with('message', 'お問い合わせを削除しました');
+        return redirect('/admin')->with('successMessage', 'お問い合わせを削除しました');
     }
 }
