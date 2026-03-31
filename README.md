@@ -41,3 +41,6 @@ phpMyAdmin:http://localhost:8080/
 - nginx 1.21.1
 - jquery 3.7.1.min.js
 ```
+
+ER図
+<img width="1662" height="785" alt="スクリーンショット 2026-03-31 154711" src="https://github.com/user-attachments/assets/13fddfaa-0271-41a3-9cb3-bab1147c1e52" />
